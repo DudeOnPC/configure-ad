@@ -41,8 +41,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 **Ensure Connectivity between the client and Domain Controller**
 
 5. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping)
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/b6ba0ecf-6b7b-47e9-9fd6-3578d98b3fe1)
+
 6. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/cbcce57e-13a8-424f-ba1e-0166b2c58d23)
+
 7. Check back at Client-1 to see the ping succeed
+
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/d5b7c264-cfe9-45af-afd5-ddcb5d93fdae)
 
 **Install Active Directory**
 
