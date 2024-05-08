@@ -25,9 +25,18 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 1. Create the Domain Controller VM (Windows Server 2022) named “DC-1”
   - Take note of the Resource Group and Virtual Network (Vnet) that get created at this time
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/3423044a-2340-4f67-8fea-a5417f6a510f)
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/9439f364-a9f8-4c76-803a-7945530a3c16)
+
 2. Set Domain Controller’s NIC Private IP address to be static
-3. Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet that was created in Step 1.a
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/58aad523-a28b-4ddb-8ce8-99f287e49a68)
+
+3. Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet that was created in Step 1
 4. Ensure that both VMs are in the same Vnet (you can check the topology with Network Watcher
+
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/86015ae7-f7a9-4880-92e3-4718bf143120)
+
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/bee9e4b7-63e8-4447-ba7d-b921cdcad350)
 
 **Ensure Connectivity between the client and Domain Controller**
 
