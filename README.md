@@ -6,7 +6,6 @@
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -100,7 +99,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 ![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/03469248-a4aa-4815-9004-0ed585bd0ff1)
 
 25. You can now log into Client-1 as a normal, non-administrative user now
-26. Normally you’d want to do this with Group Policy that allows you to change MANY systems at once (maybe a future lab)
+26. Normally you’d want to do this with Group Policy that allows you to change MANY systems at once
 
 **Create a bunch of additional users and attempt to log into client-1 with one of the users**
 
