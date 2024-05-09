@@ -24,10 +24,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 1. Create the Domain Controller VM (Windows Server 2022) named “DC-1”
   - Take note of the Resource Group and Virtual Network (Vnet) that get created at this time
+
 ![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/3423044a-2340-4f67-8fea-a5417f6a510f)
+
 ![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/9439f364-a9f8-4c76-803a-7945530a3c16)
 
 2. Set Domain Controller’s NIC Private IP address to be static
+
 ![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/58aad523-a28b-4ddb-8ce8-99f287e49a68)
 
 3. Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet that was created in Step 1
@@ -40,9 +43,11 @@ This tutorial outlines the implementation of on-premises Active Directory within
 **Ensure Connectivity between the client and Domain Controller**
 
 5. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping)
+
 ![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/b6ba0ecf-6b7b-47e9-9fd6-3578d98b3fe1)
 
 6. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall
+
 ![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/cbcce57e-13a8-424f-ba1e-0166b2c58d23)
 
 7. Check back at Client-1 to see the ping succeed
@@ -52,9 +57,11 @@ This tutorial outlines the implementation of on-premises Active Directory within
 **Install Active Directory**
 
 8. Login to DC-1 and install Active Directory Domain Services
+
 ![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/e36c420c-7f58-4b3c-bcba-c31bb83939da)
 
 9. Promote as a DC: Setup a new forest as "ADlab" (can be anything, just remember what it is)
+
 ![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/ffc73c7f-b20e-4b82-a63a-426ef9786a4f)
 
 10. Restart and then log back into DC-1 as user: ADlab.com\labuser
@@ -72,6 +79,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 15. Log out/close the Remote Desktop connection to DC-1 and log back in as “ADlab.com\jane_admin”
 16. Use jane_admin as your admin account from now on
+
 ![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/ffa98c52-43a5-4bce-90ea-c8aaf848f105)
 
 
