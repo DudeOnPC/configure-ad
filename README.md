@@ -99,7 +99,6 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/03469248-a4aa-4815-9004-0ed585bd0ff1)
 
-
 25. You can now log into Client-1 as a normal, non-administrative user now
 26. Normally you’d want to do this with Group Policy that allows you to change MANY systems at once (maybe a future lab)
 
@@ -109,5 +108,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
 28. Open PowerShell_ise as an administrator
 29. Create a new File and paste the contents of the script into it (https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
 30. Run the script and observe the accounts being created
+
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/540ba04a-5ffc-4e39-a1b7-2e2efa0605ba)
+
 31. When finished, open ADUC and observe the accounts in the appropriate OU
 32. Attempt to log into Client-1 with one of the accounts (take note of the password in the script)
+
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/f6c1155c-e3e6-4209-bb3c-9eb7a19db56f)
+
+In this case our randomly generated user was "boc.mebo" with the password "Password1" like in the script we used.
