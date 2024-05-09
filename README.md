@@ -53,8 +53,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 **Install Active Directory**
 
 8. Login to DC-1 and install Active Directory Domain Services
-9. Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
-10. Restart and then log back into DC-1 as user: mydomain.com\labuser
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/e36c420c-7f58-4b3c-bcba-c31bb83939da)
+
+9. Promote as a DC: Setup a new forest as "ADlab" (can be anything, just remember what it is)
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/ffc73c7f-b20e-4b82-a63a-426ef9786a4f)
+
+10. Restart and then log back into DC-1 as user: ADlab.com\labuser
+
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/b2ddd713-1ef6-4c6e-be18-f7778be2c4e0)
 
 **Create an Admin and Normal User Account in AD**
 
@@ -62,24 +68,38 @@ This tutorial outlines the implementation of on-premises Active Directory within
 12. Create a new OU named “_ADMINS”
 13. Create a new employee named “Jane Doe” (same password) with the username of “jane_admin”
 14. Add jane_admin to the “Domain Admins” Security Group
-15. Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
-16. User jane_admin as your admin account from now on
+
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/042cb319-171b-4932-ba27-9bf6fa7b76a5)
+
+15. Log out/close the Remote Desktop connection to DC-1 and log back in as “ADlab.com\jane_admin”
+16. Use jane_admin as your admin account from now on
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/ffa98c52-43a5-4bce-90ea-c8aaf848f105)
 
 
-**Join Client-1 to your domain (mydomain.com)**
+**Join Client-1 to your domain (ADlab.com)**
 
 17. From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address
+
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/a609072a-486f-4750-9b4d-69e559907401)
+
+
 18. From the Azure Portal, restart Client-1
 19. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)
 20. Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain
-21. Create a new OU named “_CLIENTS” and drag Client-1 into there (Step is not really necessary, just for organizational purposes. I guess I skipped this in the lab!)
+21. Create a new OU named “_CLIENTS” and drag Client-1 into there.
+
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/70cbb60b-512b-43aa-89a7-24d953013f9d)
 
 
 **Setup Remote Desktop for non-administrative users on Client-1**
 
-22. Log into Client-1 as mydomain.com\jane_admin and open system properties
+22. Log into Client-1 as ADlab.com\jane_admin and open system properties
 23. Click “Remote Desktop”
 24. Allow “domain users” access to remote desktop
+
+![image](https://github.com/DudeOnPC/configure-ad/assets/167653474/03469248-a4aa-4815-9004-0ed585bd0ff1)
+
+
 25. You can now log into Client-1 as a normal, non-administrative user now
 26. Normally you’d want to do this with Group Policy that allows you to change MANY systems at once (maybe a future lab)
 
